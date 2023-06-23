@@ -13,19 +13,13 @@ public class GameInterfase : MonoBehaviour
     void Start()
     {
         mHalse = data.playerHalse;
-        Muwer.rid.sensitivity = intensity.value;
     }
     private void OnEnable()
     {
         mHalse = data.playerHalse;
-        if (Muwer.rid)
-        {
-            Muwer.rid.sensitivity = intensity.value;
-        }
     }
     void Update()
     {
-        hPbar.fillAmount = Gun.rid.helse / mHalse;
         bullets.text = "" + data.bulets;
         coins.text = "" + data.coins;
         record.text = "" + (data.record-1);

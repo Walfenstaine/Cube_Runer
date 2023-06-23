@@ -27,52 +27,27 @@ public class Interface : MonoBehaviour
     {
         Menu();
     }
-    public void NullBK()
-    {
-        Muwer.rid.muve = Vector2.zero;
-        Muwer.rid.rut = Vector2.zero;
-        nullBK.Invoke();
-        Time.timeScale = 0;
-        Lock(false);
-    }
+
     public void Menu()
     {
-        Muwer.rid.muve = Vector2.zero;
-        Muwer.rid.rut = Vector2.zero;
         menue.Invoke();
-        Time.timeScale = 0;
-        Lock(false);
     }
     public void AndLVL()
     {
-        Muwer.rid.muve = Vector2.zero;
-        Muwer.rid.rut = Vector2.zero;
         andLVL.Invoke();
-        Time.timeScale = 0;
-        Lock(false);
     }
     public void Skill()
     {
-        Muwer.rid.muve = Vector2.zero;
-        Muwer.rid.rut = Vector2.zero;
         skill.Invoke();
-        Time.timeScale = 0;
-        Lock(false);
     }
 
     public void Game()
     {
         gameer.Invoke();
-        Time.timeScale = 1;
-        Lock(true);
-
     }
     public void GameOver()
     {
         gamover.Invoke();
-        Time.timeScale = 0;
-        Lock(false);
-
     }
     void Update()
     {
@@ -81,20 +56,4 @@ public class Interface : MonoBehaviour
             Menu();
         }
     }
-
-    void Lock(bool stateTemp)
-    {
-        if(stateTemp && (Bridge.device.type == InstantGamesBridge.Modules.Device.DeviceType.Desktop))
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-    }
-
-
 }
