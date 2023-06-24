@@ -12,7 +12,7 @@ public class Player_Input : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-           
+            
         }
     }
 }
